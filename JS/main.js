@@ -26,3 +26,13 @@ function renderGames(filteredGames) {
 document.addEventListener('DOMContentLoaded', () => {
     renderGames(games);
 });
+
+document.getElementById('search-input');
+document.getElementById('players-filter');
+document.getElementById('theme-toggle');
+
+document.querySelectorAll('.stars-filter button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterByComplexity(btn.dataset.rating);
+    });
+});
