@@ -1,4 +1,4 @@
-import games from 'JS\games-data.js';
+import games from 'JS/games-data.js';
 
 function renderGames(filteredGames) {
     const container = document.getElementById('games-container');
