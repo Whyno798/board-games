@@ -1,4 +1,4 @@
-import games from 'JS\games-data.js';
+import games from './games-data.js';
 
 const filters = {
     players: '',

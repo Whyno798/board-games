@@ -7,7 +7,7 @@ const games = [
         complexity: 2,
         type: ["Стратегия"],
         tags: ["Семейная"],
-        image: "imagines\Photosynthesis-1000x416-wm.jpg"
+        image: "./imagines/Photosynthesis-1000x416-wm.jpg"
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ const games = [
         complexity: 3,
         type: ["Стратегия"],
         tags: ["Хардкор"],
-        image: "imagines\scythe_box-1000x416-wm.jpg"
+        image: "imagines/scythe_box-1000x416-wm.jpg"
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ const games = [
         complexity: 3,
         type: ["Стратегия"],
         tags: ["Дополнение, Хардкор"],
-        image: "imagines\Scythe-Invaders-from-afar-1-1000x416-wm.jpg"
+        image: "imagines/Scythe-Invaders-from-afar-1-1000x416-wm.jpg"
     },
     {
         id: 4,
@@ -37,7 +37,7 @@ const games = [
         complexity: 4,
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
-        image: "imagines\Voina_Kolca-1000x416-wm.jpg"
+        image: "imagines/Voina_Kolca-1000x416-wm.jpg"
     },
         {
         id: 5,
@@ -47,7 +47,7 @@ const games = [
         complexity: 5,
         type: ["Стратегия, Евро"],
         tags: ["Хардкор"],
-        image: "imagines\Feudum-1000x416-wm.jpg"
+        image: "imagines/Feudum-1000x416-wm.jpg"
     },
         {
         id: 6,
@@ -57,7 +57,7 @@ const games = [
         complexity: 2,
         type: ["Экономика"],
         tags: ["Простое, Семейное"],
-        image: "imagines\x3821_nastolnaya-igra-menedzher.jpg"
+        image: "imagines/x3821_nastolnaya-igra-menedzher.jpg"
     },
         {
         id: 7,
@@ -67,7 +67,7 @@ const games = [
         complexity: 2,
         type: ["Стратегия, Логика"],
         tags: ["Простое, Семейное"],
-        image: "imagines\Ostrov_Koshek-1000x416-wm.jpg"
+        image: "imagines/Ostrov_Koshek-1000x416-wm.jpg"
     },
 
         {
@@ -78,7 +78,7 @@ const games = [
         complexity: 2,
         type: ["Стратегия"],
         tags: ["Простое, Семейное"],
-        image: "imagines\Nefarius-1980x1980-wm.jpg"
+        image: "imagines/Nefarius-1980x1980-wm.jpg"
     },    {
         id: 9,
         title: "500 злобных карт",
@@ -87,7 +87,7 @@ const games = [
         complexity: 1,
         type: ["Для вечеринок"],
         tags: ["Простое"],
-        image: "imagines\zlobnye-karty.jpg"
+        image: "imagines/zlobnye-karty.jpg"
     },    {
         id: 10,
         title: "Ужастик: Тайна особняка Фостеров",
@@ -96,7 +96,7 @@ const games = [
         complexity: 2,
         type: ["Детектив, Хоррор"],
         tags: ["С мобильным приложением. Кооператив"],
-        image: "imagines\Ujastik-1000x416-wm.jpg"
+        image: "imagines/Ujastik-1000x416-wm.jpg"
     },    {
         id: 11,
         title: "Твистер",
@@ -105,7 +105,7 @@ const games = [
         complexity: 1,
         type: ["Для вечеринок"],
         tags: ["Интерактивная"],
-        image: "imagines\Twister-1000x416-wm.jpg"
+        image: "imagines/Twister-1000x416-wm.jpg"
     },    {
         id: 12,
         title: "Каркассон: Охотники и собиратели",
@@ -114,7 +114,7 @@ const games = [
         complexity: 2,
         type: ["Стратегия"],
         tags: ["Семейное"],
-        image: "imagines\Karkasson_Ohotnik_00-1000x416-wm.jpg"
+        image: "imagines/Karkasson_Ohotnik_00-1000x416-wm.jpg"
     },    {
         id: 13,
         title: "Бункер",
@@ -123,7 +123,7 @@ const games = [
         complexity: 1,
         type: ["Для вечеринок"],
         tags: ["18+"],
-        image: "imagines\bunker-31c-00-1000x416-wm.jpg"
+        image: "imagines/bunker-31c-00-1000x416-wm.jpg"
     },    {
         id: 4,
         title: "Место преступления: Прекрасная эпоха",
@@ -132,7 +132,7 @@ const games = [
         complexity: 2,
         type: ["Детектив"],
         tags: ["С мобильным приложением"],
-        image: "imagines\Mesto_prestuplenia_Prekrasnaya_epokha_01-1000x416-wm.jpg"
+        image: "imagines/Mesto_prestuplenia_Prekrasnaya_epokha_01-1000x416-wm.jpg"
     },    {
         id: 4,
         title: "Война Кольца: Второе издание",
@@ -141,7 +141,7 @@ const games = [
         complexity: 2,
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
-        image: "imagines\Voina_Kolca-1000x416-wm.jpg"
+        image: "imagines/Voina_Kolca-1000x416-wm.jpg"
     },    {
         id: 4,
         title: "Война Кольца: Второе издание",
@@ -150,7 +150,7 @@ const games = [
         complexity: 2,
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
-        image: "imagines\Voina_Kolca-1000x416-wm.jpg"
+        image: "imagines/Voina_Kolca-1000x416-wm.jpg"
     },    {
         id: 4,
         title: "Война Кольца: Второе издание",
@@ -159,7 +159,7 @@ const games = [
         complexity: 2,
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
-        image: "imagines\Voina_Kolca-1000x416-wm.jpg"
+        image: "imagines/Voina_Kolca-1000x416-wm.jpg"
     },    {
         id: 4,
         title: "Война Кольца: Второе издание",
@@ -168,7 +168,7 @@ const games = [
         complexity: 2,
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
-        image: "imagines\Voina_Kolca-1000x416-wm.jpg"
+        image: "imagines/Voina_Kolca-1000x416-wm.jpg"
     },    {
         id: 4,
         title: "Война Кольца: Второе издание",
@@ -177,7 +177,7 @@ const games = [
         complexity: 2,
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
-        image: "imagines\Voina_Kolca-1000x416-wm.jpg"
+        image: "imagines/Voina_Kolca-1000x416-wm.jpg"
     },    {
         id: 4,
         title: "Война Кольца: Второе издание",
