@@ -304,7 +304,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines\Voina_Kolca-1000x416-wm.jpg"
-    },м
+    },
     //докидывай сюда игр
 ];
 
