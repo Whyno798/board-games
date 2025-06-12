@@ -1,5 +1,3 @@
-import games from './games-data.js';
-
 const filterByPlayers = (gamesList, playerCount) => {
     if (!playerCount) return gamesList;
     return gamesList.filter(game => {
@@ -17,12 +15,12 @@ const filterByTime = (gamesList, time) => {
 };
 
 const filterByComplexity = (gamesList, complexity) => {
-    if(!complexity) return gamesList;
+    if (!complexity) return gamesList;
     return gamesList.filter(game => game.complexity == complexity);
 };
 
 const searchGames = (gamesList, term) => {
-    if(!term) return gamesList;
+    if (!term) return gamesList;
     return gamesList.filter(game =>
         game.title.toLowerCase().includes(term.toLowerCase())
     );

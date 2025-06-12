@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="CSS\style.css">
     <link rel="stylesheet" href="CSS\filters.css">
 </head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -32,43 +34,38 @@
                 <section class="filter-section">
                     <h3><i class="fas fa-filter"></i>Фильтры</h3>
 
-                    <div id="loader" style="position:fixed; top:0; left:0; width:100%; height:100%; background:white; display:flex; justify-content:center; align-items:center; z-index:1000;">
+                    <div id="loader"
+                        style="position:fixed; top:0; left:0; width:100%; height:100%; background:white; display:flex; justify-content:center; align-items:center; z-index:1000;">
                         <i class="fas fa-dice fas fa-spin fa-3x"></i>
                     </div>
 
-                    <div class="filter-group">
-                        <h4>Количество игроков</h4>
-                        <select id="players-filter" class="filter-select">
-                            <option value="">Любое</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4+</option>
-                        </select>
-                    </div>
+                    <h4>Количество игроков</h4>
+                    <select id="players-filter" class="filter-select">
+                        <option value="">Любое</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4+</option>
+                    </select>
 
-                    <div class="filter-group">
-                        <h4>Время игры</h4>
-                        <select id="time-filter" class="filter-select">
-                            <option value="">Любое</option>
-                            <option value="30">До 30 мин</option>
-                            <option value="60">30-60 мин</option>
-                            <option value="90">60-90 мин</option>
-                            <option value="120">90+ мин</option>
-                        </select>
-                    </div>
-                    
-                    <div class="filter-group">
-                        <h4>Сложность</h4>
-                        <select id="complexity-filter" class="filter-select">
-                            <option value="">Любая сложность</option>
-                            <option value="1">Очень простая</option>
-                            <option value="2">Простая</option>
-                            <option value="3">Средняя сложность</option>
-                            <option value="4">Сложная</option>
-                            <option value="5">Очень сложная</option>
-                        </select>
-                    </div>
+                    <h4>Время игры</h4>
+                    <select id="time-filter" class="filter-select">
+                        <option value="">Любое</option>
+                        <option value="30">До 30 мин</option>
+                        <option value="60">30-60 мин</option>
+                        <option value="90">60-90 мин</option>
+                        <option value="120">90+ мин</option>
+                    </select>
+
+                    <h4>Сложность</h4>
+                    <select id="complexity-filter" class="filter-select">
+                        <option value="">Любая сложность</option>
+                        <option value="1">Очень простая</option>
+                        <option value="2">Простая</option>
+                        <option value="3">Средняя сложность</option>
+                        <option value="4">Сложная</option>
+                        <option value="5">Очень сложная</option>
+                    </select>
                     <button id="reset-filters" class="filter-btn">
                         <i class="fas fa-undo"></i> Сбросить
                     </button>
@@ -83,7 +80,7 @@
             </div>
         </div>
     </main>
-    
+
     <footer class="footer">
         <div class="container">
             <p>Коллекция настольных игр Евгении Алисовой</p>
@@ -96,4 +93,5 @@
     </main>
     <script type="module" src="./JS/main.js" defer></script>
 </body>
+
 </html>

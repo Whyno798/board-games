@@ -1,10 +1,8 @@
-import { initFilters, applyFilters} from './filters.js';
+import { initFilters, applyFilters } from './filters.js';
 import games from './games-data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('games-container');
-
-    initFilters();
 
     function renderGames(gamesToRender) {
         container.innerHTML = gamesToRender.map(game => `
@@ -21,8 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             `).join('');
     }
-
-    renderGames(games);
 
     initFilters(filters => {
         renderGames(applyFilters(games, filters));

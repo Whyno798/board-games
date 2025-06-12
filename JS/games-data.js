@@ -39,7 +39,7 @@ const games = [
         tags: ["Хардкор"],
         image: "imagines/Voina_Kolca-1000x416-wm.jpg"
     },
-        {
+    {
         id: 5,
         title: "Феод",
         players: "2-5",
@@ -49,7 +49,7 @@ const games = [
         tags: ["Хардкор"],
         image: "imagines/Feudum-1000x416-wm.jpg"
     },
-        {
+    {
         id: 6,
         title: "Менеджер",
         players: "2-6",
@@ -59,7 +59,7 @@ const games = [
         tags: ["Простое, Семейное"],
         image: "imagines/x3821_nastolnaya-igra-menedzher.jpg"
     },
-        {
+    {
         id: 7,
         title: "Остров кошек",
         players: "1-4",
@@ -70,7 +70,7 @@ const games = [
         image: "imagines/Ostrov_Koshek-1000x416-wm.jpg"
     },
 
-        {
+    {
         id: 8,
         title: "Нефариус",
         players: "2-6",
@@ -79,7 +79,7 @@ const games = [
         type: ["Стратегия"],
         tags: ["Простое, Семейное"],
         image: "imagines/Nefarius-1980x1980-wm.jpg"
-    },    {
+    }, {
         id: 9,
         title: "500 злобных карт",
         players: "3-100",
@@ -88,7 +88,7 @@ const games = [
         type: ["Для вечеринок"],
         tags: ["Простое"],
         image: "imagines/zlobnye-karty.jpg"
-    },    {
+    }, {
         id: 10,
         title: "Ужастик: Тайна особняка Фостеров",
         players: "4-5",
@@ -97,7 +97,7 @@ const games = [
         type: ["Детектив, Хоррор"],
         tags: ["С мобильным приложением. Кооператив"],
         image: "imagines/Ujastik-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 11,
         title: "Твистер",
         players: "2+",
@@ -106,7 +106,7 @@ const games = [
         type: ["Для вечеринок"],
         tags: ["Интерактивная"],
         image: "imagines/Twister-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 12,
         title: "Каркассон: Охотники и собиратели",
         players: "2-5",
@@ -115,7 +115,7 @@ const games = [
         type: ["Стратегия"],
         tags: ["Семейное"],
         image: "imagines/Karkasson_Ohotnik_00-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 13,
         title: "Бункер",
         players: "4-16",
@@ -124,7 +124,7 @@ const games = [
         type: ["Для вечеринок"],
         tags: ["18+"],
         image: "imagines/bunker-31c-00-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Место преступления: Прекрасная эпоха",
         players: "1-4",
@@ -133,7 +133,7 @@ const games = [
         type: ["Детектив"],
         tags: ["С мобильным приложением"],
         image: "imagines/Mesto_prestuplenia_Prekrasnaya_epokha_01-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -142,7 +142,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines/Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -151,7 +151,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines/Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -160,7 +160,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines/Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -169,7 +169,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines/Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -178,7 +178,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines/Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -187,7 +187,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines\Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -196,7 +196,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines\Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -205,7 +205,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines\Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -214,7 +214,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines\Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -223,7 +223,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines\Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -232,7 +232,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines\Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -241,7 +241,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines\Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -250,7 +250,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines\Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -259,7 +259,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines\Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -268,7 +268,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines\Voina_Kolca-1000x416-wm.jpg"
-    },   {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -277,7 +277,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines\Voina_Kolca-1000x416-wm.jpg"
-    },   {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -286,7 +286,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines\Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
@@ -295,7 +295,7 @@ const games = [
         type: ["Стратегия, Дуэль"],
         tags: ["Хардкор"],
         image: "imagines\Voina_Kolca-1000x416-wm.jpg"
-    },    {
+    }, {
         id: 4,
         title: "Война Кольца: Второе издание",
         players: "2-4",
