@@ -17,12 +17,9 @@
             <div class="header_controls">
                 <div class="search-box">
                     <input type="text" id="search-input" placeholder="Найти игру...">
-                    <button id="search-btn">
-                        <i class="fas fa-search"></i>
-                    </button>
                 </div>
                 <div class="stats">
-                    <span id="games-count">0</span>игр в коллекции
+                    <span id="games-count">Дохуя</span> игр в коллекции
                 </div>
             </div>
         </div>
@@ -63,17 +60,17 @@
                     
                     <div class="filter-group">
                         <h4>Сложность</h4>
-                        <div class="stars-filter">
-                            <button data-rating="1"></button>
-                            <button data-rating="2"></button>
-                            <button data-rating="3"></button>
-                            <button data-rating="4"></button>
-                            <button data-rating="5"></button>
-                        </div>
+                        <select id="complexity-filter" class="filter-select">
+                            <option value="">Любая сложность</option>
+                            <option value="1">Очень простая</option>
+                            <option value="2">Простая</option>
+                            <option value="3">Средняя сложность</option>
+                            <option value="4">Сложная</option>
+                            <option value="5">Очень сложная</option>
+                        </select>
                     </div>
-
-                    <button id="reset-filters" class="btn">
-                        <i class="fas fa-undo"></i>Сбросить
+                    <button id="reset-filters" class="filter-btn">
+                        <i class="fas fa-undo"></i> Сбросить
                     </button>
                 </section>
             </aside>

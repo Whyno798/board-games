@@ -33,6 +33,11 @@ body {
     font-size: 2rem;
 }
 
+#search-input {
+    flex-grow: 1;
+    max-width: 300px;
+}
+
 .games-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
