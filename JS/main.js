@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderGames(gamesToRender) {
         container.innerHTML = gamesToRender.map(game => `
-            <div class="game-card">
+            <div class="game-card" data-id="${game.id}">
                 <img src="${game.image}" alt="${game.title}" loading="lazy">
                 <div class="game-info">
                     <h3>${game.title}</h3>
