@@ -60,41 +60,51 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showGameModal(game) {
-        const modal = document.createElement('div');
-        modal.className = 'modal';
-        modal.innerHTML = `
-            <div class="modal-content">
-                <span class="modal-close">&times;</span>
-                <div class="modal-header">
-                    <h2>${game.title}</h2>
-                </div>
-                <div class="modal-body">
-                    <img src="${game.image}" alt="${game.title}" class="modal-image">
-                    <div class="modal-info">
-                        <p><strong>Игроки:</strong> ${game.players}</p>
-                        <p><strong>Время игры:</strong> ${game.time}</p>
-                        <p><strong>Сложность:</strong> ${complexityText[game.complexity] || game.complexity}</p>
-                        <p><strong>Тип:</strong> ${game.type.join(', ')}</p>
-                        ${game.tags && game.tags.length > 0 ? `<p><strong>Теги:</strong> ${game.tags.join(', ')}</p>` : ''}
-                    </div>
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Закрыть">&times;</button>
+            <div class="modal-header">
+                <h2>${game.title}</h2>
+            </div>
+            <div class="modal-body">
+                <img src="${game.image}" alt="${game.title}" class="modal-image">
+                <div class="modal-info">
+                    <p><strong>Игроки:</strong> ${game.players}</p>
+                    <p><strong>Время игры:</strong> ${game.time}</p>
+                    <p><strong>Сложность:</strong> ${complexityText[game.complexity] || game.complexity}</p>
+                    <p><strong>Тип:</strong> ${game.type.join(', ')}</p>
+                    ${game.tags && game.tags.length > 0 ? `<p><strong>Теги:</strong> ${game.tags.join(', ')}</p>` : ''}
                 </div>
             </div>
-        `;
-        document.body.appendChild(modal);
-        modal.style.display = 'block';
+        </div>
+    `;
+    document.body.appendChild(modal);
+    modal.style.display = 'block';
 
-        modal.querySelector('.modal-close').addEventListener('click', () => {
+    // Закрытие по клику на кнопку
+    modal.querySelector('.modal-close').addEventListener('click', () => {
+        modal.style.display = 'none';
+        setTimeout(() => modal.remove(), 300);
+    });
+
+    // Закрытие по клику вне модального окна
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
             modal.style.display = 'none';
             setTimeout(() => modal.remove(), 300);
-        });
+        }
+    });
 
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-                setTimeout(() => modal.remove(), 300);
-            }
-        });
-    }
+    // Закрытие по ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            modal.style.display = 'none';
+            setTimeout(() => modal.remove(), 300);
+        }
+    });
+}
 
 
     initFilters((filters) => {
@@ -123,6 +133,32 @@ document.addEventListener('DOMContentLoaded', () => {
         sortButton.innerHTML = sortDirection === 1
             ? '<i class="fas fa-sort-alpha-down"></i> Сортировать А-Я'
             : '<i class="fas fa-sort-alpha-up"></i> Сортировать Я-А';
+    });
+
+    // Добавить после сортировки по алфавиту
+    document.getElementById('random-game').addEventListener('click', () => {
+        const currentFilters = getCurrentFilters();
+        const filteredGames = applyFilters(games, currentFilters);
+
+        if (filteredGames.length === 0) {
+            alert('Нет игр, соответствующих выбранным фильтрам!');
+            return;
+        }
+
+        const randomGame = filteredGames[Math.floor(Math.random() * filteredGames.length)];
+        showGameModal(randomGame);
+
+        // Прокручиваем к выбранной карточке
+        const gameCard = document.querySelector(`.game-card[data-id="${randomGame.id}"]`);
+        if (gameCard) {
+            gameCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Добавляем анимацию выделения
+            gameCard.classList.add('highlight');
+            setTimeout(() => {
+                gameCard.classList.remove('highlight');
+            }, 2000);
+        }
     });
 
 

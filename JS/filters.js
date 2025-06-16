@@ -15,15 +15,25 @@ const filterByTime = (gamesList, selectedTimes) => {
 
     return gamesList.filter(game => {
         const timeStr = game.time;
+
         const numbers = timeStr.match(/\d+/g) || [];
-        const gameTime = numbers.length > 0 ? parseInt(numbers[0]) : 0;
+
+        const times = numbers.map(Number).sort((a, b) => a - b);
+
+        const maxGameTime = times.length > 0 ? times[times.length - 1] : 0;
 
         return selectedTimes.some(time => {
             const maxTime = parseInt(time);
-            if (timeStr.includes('+')) {
-                return gameTime >= maxTime;
+            if (time === "30") {
+                return maxGameTime <= 30;
+            } else if (time === "60") {
+                return maxGameTime > 30 && maxGameTime <= 60;
+            } else if (time === "90") {
+                return maxGameTime > 60 && maxGameTime <= 90;
+            } else if (time === "120") {
+                return maxGameTime > 90;
             }
-            return gameTime <= maxTime;
+            return false;
         });
     });
 };

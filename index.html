@@ -13,18 +13,17 @@
     <header class="header">
         <div class="container">
             <h1 class="header_title">
-                <i class="fas fa-dice"></i> Игротека
-        </div>
-        </h1>
-        <div class="header_subtitle">Коллекция Евгении Алисовой</div>
-        <div class="header_controls">
-            <div class="search-box">
-                <input type="text" id="search-input" placeholder="Найти игру...">
+                <span class="main-title"><i class="fas fa-dice"></i> Игротека</span>
+                <span class="sub-title">Коллекция Евгении Алисовой</span>
+            </h1>
+            <div class="header_controls">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Найти игру...">
+                </div>
+                <div class="stats">
+                    <span id="games-count">Дохуя</span> игр в коллекции
+                </div>
             </div>
-            <div class="stats">
-                <span id="games-count">Дохуя</span> игр в коллекции
-            </div>
-        </div>
         </div>
     </header>
 
@@ -36,63 +35,71 @@
             </button>
 
             <aside class="filters">
-                <section class="filter-section">
-                    <h3><i class="fas fa-filter"></i>Фильтры</h3>
+                <div class="filters-columns">
+                    <div class="filters-column">
+                        <section class="filter-section">
+                            <h4>Количество игроков</h4>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="players" value="1"> 1 игрок</label>
+                                <label><input type="checkbox" name="players" value="2"> 2 игрока</label>
+                                <label><input type="checkbox" name="players" value="3"> 3 игрока</label>
+                                <label><input type="checkbox" name="players" value="4"> 4+ игроков</label>
+                            </div>
+                        </section>
+
+                        <section class="filter-section">
+                            <h4>Время игры</h4>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="time" value="30"> До 30 мин</label>
+                                <label><input type="checkbox" name="time" value="60"> 30-60 мин</label>
+                                <label><input type="checkbox" name="time" value="90"> 60-90 мин</label>
+                                <label><input type="checkbox" name="time" value="120"> 90+ мин</label>
+                            </div>
+                        </section>
+
+                        <section class="filter-section">
+                            <h4>Сложность</h4>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="complexity" value="1"> Очень простая</label>
+                                <label><input type="checkbox" name="complexity" value="2"> Простая</label>
+                                <label><input type="checkbox" name="complexity" value="3"> Средняя</label>
+                                <label><input type="checkbox" name="complexity" value="4"> Сложная</label>
+                                <label><input type="checkbox" name="complexity" value="5"> Очень сложная</label>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="filters-column">
+                        <div class="accordion">
+                            <h4 class="accordion-header">
+                                <span>Тип игры</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </h4>
+                            <div class="checkbox-group accordion-content">
+                                <label><input type="checkbox" name="type" value="Стратегия"> Стратегия</label>
+                                <label><input type="checkbox" name="type" value="Карточная"> Карточная</label>
+                                <label><input type="checkbox" name="type" value="Дуэль"> Дуэль</label>
+                                <label><input type="checkbox" name="type" value="Для вечеринок"> Вечеринки</label>
+                                <label><input type="checkbox" name="type" value="Кооператив"> Кооператив</label>
+                                <label><input type="checkbox" name="type" value="Детектив"> Детектив</label>
+                                <label><input type="checkbox" name="type" value="Хоррор"> Хоррор</label>
+                                <label><input type="checkbox" name="type" value="Экономика"> Экономика</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-buttons-container">
                     <button id="reset-filters" class="filter-btn">
                         <i class="fas fa-undo"></i> Сбросить
                     </button>
-
-
-                    <div id="loader"
-                        style="position:fixed; top:0; left:0; width:100%; height:100%; background:white; display:flex; justify-content:center; align-items:center; z-index:1000;">
-                        <i class="fas fa-dice fas fa-spin fa-3x"></i>
-                    </div>
-
-
-                    <h4>Количество игроков</h4>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="players" value="1"> 1 игрок</label>
-                        <label><input type="checkbox" name="players" value="2"> 2 игрока</label>
-                        <label><input type="checkbox" name="players" value="3"> 3 игрока</label>
-                        <label><input type="checkbox" name="players" value="4"> 4+ игроков</label>
-                    </div>
-
-                    <h4>Время игры</h4>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="time" value="30"> До 30 мин</label>
-                        <label><input type="checkbox" name="time" value="60"> 30-60 мин</label>
-                        <label><input type="checkbox" name="time" value="90"> 60-90 мин</label>
-                        <label><input type="checkbox" name="time" value="120"> 90+ мин</label>
-                    </div>
-
-                    <h4>Сложность</h4>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="complexity" value="1"> Очень простая</label>
-                        <label><input type="checkbox" name="complexity" value="2"> Простая</label>
-                        <label><input type="checkbox" name="complexity" value="3"> Средняя</label>
-                        <label><input type="checkbox" name="complexity" value="4"> Сложная</label>
-                        <label><input type="checkbox" name="complexity" value="5"> Очень сложная</label>
-                    </div>
-                    <div class="accordion">
-                        <h4 class="accordion-header">
-                            <span>Тип игры</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </h4>
-                        <div class="checkbox-group accordion-content">
-                            <label><input type="checkbox" name="type" value="Стратегия"> Стратегия</label>
-                            <label><input type="checkbox" name="type" value="Карточная"> Карточная</label>
-                            <label><input type="checkbox" name="type" value="Дуэль"> Дуэль</label>
-                            <label><input type="checkbox" name="type" value="Для вечеринок"> Для вечеринок</label>
-                            <label><input type="checkbox" name="type" value="Кооператив"> Кооператив</label>
-                            <label><input type="checkbox" name="type" value="Детектив"> Детектив</label>
-                            <label><input type="checkbox" name="type" value="Хоррор"> Хоррор</label>
-                            <label><input type="checkbox" name="type" value="Экономика"> Экономика</label>
-                        </div>
-                    </div>
                     <button id="sort-alphabet" class="filter-btn">
-                        <i class="fas fa-sort-alpha-down"></i> Сортировать по алфавиту
+                        <i class="fas fa-sort-alpha-down"></i> Сортировать А-Я
                     </button>
-                </section>
+                    <button id="random-game" class="filter-btn">
+                        <i class="fas fa-random"></i> Случайная игра
+                    </button>
+                </div>
             </aside>
 
             <div class="games-container" id="games-container">
