@@ -1,6 +1,16 @@
 import { initFilters, applyFilters } from './filters.js';
 import games from './games-data.js';
 
+const complexityText = {
+    1: 'Очень простая',
+    2: 'Простая',
+    3: 'Средняя',
+    4: 'Сложная',
+    5: 'Очень сложная',
+};
+
+let sortDirection = 1
+
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('games-container');
 
@@ -24,14 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const complexityText = {
-            1: 'Очень простая',
-            2: 'Простая',
-            3: 'Средняя',
-            4: 'Сложная',
-            5: 'Очень сложная',
-        };
-
         container.innerHTML = gamesToRender.map(game => `
             <div class="game-card" data-id="${game.id}">
                 <img src="${game.image}" alt="${game.title}" class="game-card_image" loading="lazy">
@@ -45,16 +47,129 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
         `).join('');
+
+        document.querySelectorAll('.game-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const gameId = parseInt(card.getAttribute('data-id'));
+                const game = games.find(g => g.id === gameId);
+                if (game) {
+                    showGameModal(game);
+                }
+            });
+        });
     }
 
-    initFilters(filters => {
+    function showGameModal(game) {
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.innerHTML = `
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-header">
+                    <h2>${game.title}</h2>
+                </div>
+                <div class="modal-body">
+                    <img src="${game.image}" alt="${game.title}" class="modal-image">
+                    <div class="modal-info">
+                        <p><strong>Игроки:</strong> ${game.players}</p>
+                        <p><strong>Время игры:</strong> ${game.time}</p>
+                        <p><strong>Сложность:</strong> ${complexityText[game.complexity] || game.complexity}</p>
+                        <p><strong>Тип:</strong> ${game.type.join(', ')}</p>
+                        ${game.tags && game.tags.length > 0 ? `<p><strong>Теги:</strong> ${game.tags.join(', ')}</p>` : ''}
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+        modal.style.display = 'block';
+
+        modal.querySelector('.modal-close').addEventListener('click', () => {
+            modal.style.display = 'none';
+            setTimeout(() => modal.remove(), 300);
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                setTimeout(() => modal.remove(), 300);
+            }
+        });
+    }
+
+
+    initFilters((filters) => {
         const filteredGames = applyFilters(games, filters);
         renderGames(filteredGames);
     });
 
-    renderGames(games);
-});
 
-window.addEventListener('load', () => {
-    document.getElementById('loader').style.display = 'none';
+    renderGames(games);
+
+    function sortGames(gamesList, direction) {
+        return [...gamesList].sort((a, b) => {
+            return direction * a.title.localeCompare(b.title, 'ru');
+        });
+    }
+
+    document.getElementById('sort-alphabet').addEventListener('click', () => {
+        sortDirection *= -1;
+        const currentFilters = getCurrentFilters();
+        const filteredGames = applyFilters(games, currentFilters);
+        const sortedGames = sortGames(filteredGames, sortDirection);
+        renderGames(sortedGames);
+
+
+        const sortButton = document.getElementById('sort-alphabet');
+        sortButton.innerHTML = sortDirection === 1
+            ? '<i class="fas fa-sort-alpha-down"></i> Сортировать А-Я'
+            : '<i class="fas fa-sort-alpha-up"></i> Сортировать Я-А';
+    });
+
+
+    function getCurrentFilters() {
+        return {
+            searchTerm: document.getElementById('search-input').value,
+            playerCounts: Array.from(document.querySelectorAll('input[name="players"]:checked')).map(cb => cb.value),
+            maxTimes: Array.from(document.querySelectorAll('input[name="time"]:checked')).map(cb => cb.value),
+            complexities: Array.from(document.querySelectorAll('input[name="complexity"]:checked')).map(cb => cb.value),
+            types: Array.from(document.querySelectorAll('input[name="type"]:checked')).map(cb => cb.value),
+        };
+    }
+
+    window.addEventListener('load', () => {
+        document.getElementById('loader').style.display = 'none';
+    });
+
+    const backToTopButton = document.createElement('div');
+    backToTopButton.className = 'back-to-top';
+    backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    document.body.appendChild(backToTopButton);
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const mobileFiltersToggle = document.getElementById('mobile-filters-toggle');
+    const filters = document.querySelector('.filters');
+
+    if (mobileFiltersToggle && filters) {
+        mobileFiltersToggle.addEventListener('click', () => {
+            filters.classList.toggle('visible');
+        });
+    }
+
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const accordion = header.parentElement;
+            accordion.classList.toggle('active');
+        });
+    });
 });
