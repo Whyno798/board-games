@@ -1,22 +1,30 @@
-const filterByPlayers = (gamesList, playerCount) => {
-    if (!playerCount) return gamesList;
+const filterByPlayers = (gamesList, selectedPlayers) => {
+    if (!selectedPlayers || selectedPlayers.length === 0) return gamesList;
+    
     return gamesList.filter(game => {
         const [min, max] = game.players.split('-').map(Number);
-        return parseInt(playerCount) >= min && parseInt(playerCount) <= max;
+        return selectedPlayers.some(playerCount => {
+            const count = parseInt(playerCount);
+            return count >= min && count <= max;
+        });
     });
 };
 
-const filterByTime = (gamesList, time) => {
-    if (!time) return gamesList;
+const filterByTime = (gamesList, selectedTimes) => {
+    if (!selectedTimes || selectedTimes.length === 0) return gamesList;
+    
     return gamesList.filter(game => {
-        const [minTime] = game.time.match(/\d+/g) || [0];
-        return parseInt(minTime) <= parseInt(time);
+        const gameTime = parseInt(game.time.match(/\d+/g)[0] || 0);
+        return selectedTimes.some(time => {
+            const maxTime = parseInt(time);
+            return gameTime <= maxTime;
+        });
     });
 };
 
-const filterByComplexity = (gamesList, complexity) => {
-    if (!complexity) return gamesList;
-    return gamesList.filter(game => game.complexity == complexity);
+const filterByComplexity = (gamesList, selectedComplexities) => {
+    if (!selectedComplexities || selectedComplexities.length === 0) return gamesList;
+    return gamesList.filter(game => selectedComplexities.includes(game.complexity.toString()));
 };
 
 const searchGames = (gamesList, term) => {
@@ -29,38 +37,43 @@ const searchGames = (gamesList, term) => {
 export function applyFilters(games, filters) {
     let result = [...games];
     result = searchGames(result, filters.searchTerm);
-    result = filterByPlayers(result, filters.playerCount);
-    result = filterByTime(result, filters.maxTime);
-    result = filterByComplexity(result, filters.complexity);
+    result = filterByPlayers(result, filters.playerCounts);
+    result = filterByTime(result, filters.maxTimes);
+    result = filterByComplexity(result, filters.complexities);
     return result;
 };
 
 export function initFilters(onFilterChange) {
     const searchInput = document.getElementById('search-input');
-    const playersFilter = document.getElementById('players-filter');
-    const timeFilter = document.getElementById('time-filter');
-    const complexityFilter = document.getElementById('complexity-filter');
     const resetBtn = document.getElementById('reset-filters');
-
-    const getCurrentFilters = () => ({
-        searchTerm: searchInput.value,
-        playerCount: playersFilter.value,
-        maxTime: timeFilter.value,
-        complexity: complexityFilter.value,
-    });
-
+    
+    const getCurrentFilters = () => {
+        const playerCheckboxes = document.querySelectorAll('input[name="players"]:checked');
+        const timeCheckboxes = document.querySelectorAll('input[name="time"]:checked');
+        const complexityCheckboxes = document.querySelectorAll('input[name="complexity"]:checked');
+        
+        return {
+            searchTerm: searchInput.value,
+            playerCounts: Array.from(playerCheckboxes).map(cb => cb.value),
+            maxTimes: Array.from(timeCheckboxes).map(cb => cb.value),
+            complexities: Array.from(complexityCheckboxes).map(cb => cb.value),
+        };
+    };
+    
     const notify = () => onFilterChange(getCurrentFilters());
-
+    
+    // Обработчики для всех чекбоксов
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', notify);
+    });
+    
     searchInput.addEventListener('input', notify);
-    playersFilter.addEventListener('change', notify);
-    timeFilter.addEventListener('change', notify);
-    complexityFilter.addEventListener('change', notify);
-
+    
     resetBtn.addEventListener('click', () => {
         searchInput.value = '';
-        playersFilter.value = '';
-        timeFilter.value = '';
-        complexityFilter.value = '';
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
         notify();
     });
 }

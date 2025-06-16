@@ -7,7 +7,6 @@
     <title>Настолки</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="CSS\style.css">
-    <link rel="stylesheet" href="CSS\filters.css">
 </head>
 
 <body>
@@ -40,32 +39,29 @@
                     </div>
 
                     <h4>Количество игроков</h4>
-                    <select id="players-filter" class="filter-select">
-                        <option value="">Любое</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4+</option>
-                    </select>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="players" value="1"> 1 игрок</label>
+                        <label><input type="checkbox" name="players" value="2"> 2 игрока</label>
+                        <label><input type="checkbox" name="players" value="3"> 3 игрока</label>
+                        <label><input type="checkbox" name="players" value="4"> 4+ игроков</label>
+                    </div>
 
                     <h4>Время игры</h4>
-                    <select id="time-filter" class="filter-select">
-                        <option value="">Любое</option>
-                        <option value="30">До 30 мин</option>
-                        <option value="60">30-60 мин</option>
-                        <option value="90">60-90 мин</option>
-                        <option value="120">90+ мин</option>
-                    </select>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="time" value="30"> До 30 мин</label>
+                        <label><input type="checkbox" name="time" value="60"> 30-60 мин</label>
+                        <label><input type="checkbox" name="time" value="90"> 60-90 мин</label>
+                        <label><input type="checkbox" name="time" value="120"> 90+ мин</label>
+                    </div>
 
                     <h4>Сложность</h4>
-                    <select id="complexity-filter" class="filter-select">
-                        <option value="">Любая сложность</option>
-                        <option value="1">Очень простая</option>
-                        <option value="2">Простая</option>
-                        <option value="3">Средняя сложность</option>
-                        <option value="4">Сложная</option>
-                        <option value="5">Очень сложная</option>
-                    </select>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="complexity" value="1"> Очень простая</label>
+                        <label><input type="checkbox" name="complexity" value="2"> Простая</label>
+                        <label><input type="checkbox" name="complexity" value="3"> Средняя</label>
+                        <label><input type="checkbox" name="complexity" value="4"> Сложная</label>
+                        <label><input type="checkbox" name="complexity" value="5"> Очень сложная</label>
+                    </div>
                     <button id="reset-filters" class="filter-btn">
                         <i class="fas fa-undo"></i> Сбросить
                     </button>
@@ -90,7 +86,6 @@
         </div>
     </footer>
 
-    </main>
     <script type="module" src="./JS/main.js" defer></script>
 </body>
 
