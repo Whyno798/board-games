@@ -188,9 +188,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelectorAll('.accordion-header').forEach(header => {
-        header.addEventListener('click', () => {
+        header.addEventListener('click', (e) => {
+            e.stopPropagation();
             const accordion = header.parentElement;
             accordion.classList.toggle('active');
+
+            if (window.innerWidth <= 992 && accordion.classList.contains('active')) {
+                setTimeout(() => {
+                    accordion.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
         });
     });
 
