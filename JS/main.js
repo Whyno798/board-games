@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showGameModal(game) {
-    const modal = document.createElement('div');
-    modal.className = 'modal';
-    modal.innerHTML = `
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.innerHTML = `
         <div class="modal-content">
             <button class="modal-close" aria-label="Закрыть">&times;</button>
             <div class="modal-header">
@@ -80,31 +80,28 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         </div>
     `;
-    document.body.appendChild(modal);
-    modal.style.display = 'block';
+        document.body.appendChild(modal);
+        modal.style.display = 'block';
 
-    // Закрытие по клику на кнопку
-    modal.querySelector('.modal-close').addEventListener('click', () => {
-        modal.style.display = 'none';
-        setTimeout(() => modal.remove(), 300);
-    });
-
-    // Закрытие по клику вне модального окна
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
+        modal.querySelector('.modal-close').addEventListener('click', () => {
             modal.style.display = 'none';
             setTimeout(() => modal.remove(), 300);
-        }
-    });
+        });
 
-    // Закрытие по ESC
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            modal.style.display = 'none';
-            setTimeout(() => modal.remove(), 300);
-        }
-    });
-}
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                setTimeout(() => modal.remove(), 300);
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                modal.style.display = 'none';
+                setTimeout(() => modal.remove(), 300);
+            }
+        });
+    }
 
 
     initFilters((filters) => {
@@ -135,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
             : '<i class="fas fa-sort-alpha-up"></i> Сортировать Я-А';
     });
 
-    // Добавить после сортировки по алфавиту
     document.getElementById('random-game').addEventListener('click', () => {
         const currentFilters = getCurrentFilters();
         const filteredGames = applyFilters(games, currentFilters);
@@ -148,12 +144,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const randomGame = filteredGames[Math.floor(Math.random() * filteredGames.length)];
         showGameModal(randomGame);
 
-        // Прокручиваем к выбранной карточке
         const gameCard = document.querySelector(`.game-card[data-id="${randomGame.id}"]`);
         if (gameCard) {
             gameCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-            // Добавляем анимацию выделения
             gameCard.classList.add('highlight');
             setTimeout(() => {
                 gameCard.classList.remove('highlight');
@@ -199,6 +193,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileFiltersToggle && filters) {
         mobileFiltersToggle.addEventListener('click', () => {
             filters.classList.toggle('visible');
+            document.body.style.overflow = filters.classList.contains('visible') ? 'hidden' : '';
+        });
+
+        filters.addEventListener('click', (e) => {
+            if (e.target === filters) {
+                filters.classList.remove('visible');
+                document.body.style.overflow = '';
+            }
         });
     }
 
