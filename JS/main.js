@@ -203,11 +203,4 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = filters.classList.contains('visible') ? 'hidden' : '';
         });
     }
-
-    document.querySelectorAll('.accordion-header').forEach(header => {
-        header.addEventListener('click', () => {
-            const accordion = header.parentElement;
-            accordion.classList.toggle('active');
-        });
-    });
 });

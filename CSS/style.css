@@ -263,7 +263,6 @@ a {
 .filter-section {
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid #eee;
 }
 
 .filter-section h3 {
@@ -357,31 +356,52 @@ a {
 
 /* Accordion */
 .accordion {
-    background: white;
-    padding: 0.8rem;
-    margin-bottom: 0.5rem;
+    background: transparent;
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+    box-shadow: none;
+    overflow: hidden;
 }
 
 .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    transition: var(--transition);
+    color: var(--secondary);
     font-size: 0.95rem;
-    color: var(--secondary) !important;
-    margin: 0 0 0.75rem 0;
-    padding-bottom: 0.25rem;
+    margin: 0.75rem 0 0.5rem;
     border-bottom: 1px solid var(--light-gray);
 }
 
+.accordion-header:hover {
+    color: var(--primary-dark);
+    background-color: transparent;
+}
+
+.accordion-header i {
+    transition: transform 0.3s ease;
+    color: var(--secondary);
+}
+
+.accordion.active .accordion-header i {
+    transform: rotate(180deg);
+}
+
 .accordion-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.3rem;
+    padding: 0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
 }
 
 .accordion.active .accordion-content {
-    max-height: 500px;
-    padding-top: 0.5rem;
+    max-height: 1000px;
+    padding: 0.5rem 0;
 }
 
 /* ======================
