@@ -187,23 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    const mobileFiltersToggle = document.getElementById('mobile-filters-toggle');
-    const filters = document.querySelector('.filters');
-
-    if (mobileFiltersToggle && filters) {
-        mobileFiltersToggle.addEventListener('click', () => {
-            filters.classList.toggle('visible');
-            document.body.style.overflow = filters.classList.contains('visible') ? 'hidden' : '';
-        });
-
-        filters.addEventListener('click', (e) => {
-            if (e.target === filters) {
-                filters.classList.remove('visible');
-                document.body.style.overflow = '';
-            }
-        });
-    }
-
     document.querySelectorAll('.accordion-header').forEach(header => {
         header.addEventListener('click', () => {
             const accordion = header.parentElement;
