@@ -203,15 +203,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mobileFiltersToggle = document.getElementById('mobile-filters-toggle');
     const filters = document.querySelector('.filters');
+    const body = document.body;
 
     if (mobileFiltersToggle && filters) {
         mobileFiltersToggle.addEventListener('click', () => {
             filters.classList.toggle('visible');
+            body.classList.toggle('no-scroll');
 
-            if (window.innerWidth <= 992) {
-                document.querySelectorAll('.accordion').forEach(acc => {
-                    acc.classList.add('active');
-                });
+            if (filters.classList.contains('visible')) {
+                window.scrollTo(0, 0);
             }
         });
     }
