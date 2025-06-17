@@ -690,6 +690,10 @@ a {
         --card-fixed-width: 180px;
     }
 
+    body {
+        touch-action: pan-y;
+    }
+
     .container {
         grid-template-columns: 1fr;
         padding: 0 1rem;
@@ -713,6 +717,7 @@ a {
 
     .filters.visible {
         display: block;
+        overscroll-behavior-y: contain;
     }
 
     .mobile-filters-toggle {
@@ -734,8 +739,10 @@ a {
         grid-template-columns: 1fr;
         padding-bottom: 120px;
         padding-right: 8px;
-        overflow-y: visible;
-        max-height: none;
+        overflow-y: auto;
+        max-height: calc(100vh - 200px);
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
     }
 
     .filter-buttons-container {
