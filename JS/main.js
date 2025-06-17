@@ -208,7 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileFiltersToggle && filters) {
         mobileFiltersToggle.addEventListener('click', (e) => {
             e.stopPropagation();
-            body.classList.toggle('no-scroll');
             filters.classList.toggle('visible');
 
             const icon = mobileFiltersToggle.querySelector('i');
@@ -221,7 +220,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 !filters.contains(e.target) &&
                 e.target !== mobileFiltersToggle &&
                 !mobileFiltersToggle.contains(e.target)) {
-                body.classList.remove('no-scroll');
                 filters.classList.remove('visible');
 
                 const icon = mobileFiltersToggle.querySelector('i');
