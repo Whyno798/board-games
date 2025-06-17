@@ -192,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mobileFiltersToggle.addEventListener('click', () => {
         filters.classList.toggle('visible');
+        document.body.style.overflow = filters.classList.contains('visible') ? 'hidden' : '';
     });
 
     document.querySelectorAll('.accordion-header').forEach(header => {
