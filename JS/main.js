@@ -210,8 +210,22 @@ document.addEventListener('DOMContentLoaded', () => {
             filters.classList.toggle('visible');
             body.classList.toggle('no-scroll');
 
+            const icon = mobileFiltersToggle.querySelector('i');
             if (filters.classList.contains('visible')) {
-                window.scrollTo(0, 0);
+                icon.classList.remove('fa-filter');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-filter');
+            }
+        });
+
+        filters.addEventListener('click', (e) => {
+            if (e.target === filters) {
+                filters.classList.remove('visible');
+                body.classList.remove('no-scroll');
+                mobileFiltersToggle.querySelector('i').classList.remove('fa-times');
+                mobileFiltersToggle.querySelector('i').classList.add('fa-filter');
             }
         });
     }
