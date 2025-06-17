@@ -203,25 +203,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mobileFiltersToggle = document.getElementById('mobile-filters-toggle');
     const filters = document.querySelector('.filters');
-    const body = document.body;
 
     if (mobileFiltersToggle && filters) {
         mobileFiltersToggle.addEventListener('click', (e) => {
             e.stopPropagation();
             filters.classList.toggle('visible');
-
             const icon = mobileFiltersToggle.querySelector('i');
             icon.classList.toggle('fa-filter');
             icon.classList.toggle('fa-times');
         });
 
         document.addEventListener('click', (e) => {
-            if (filters.classList.contains('visible') &&
-                !filters.contains(e.target) &&
-                e.target !== mobileFiltersToggle &&
-                !mobileFiltersToggle.contains(e.target)) {
+            if (!filters.contains(e.target) && e.target !== mobileFiltersToggle) {
                 filters.classList.remove('visible');
-
                 const icon = mobileFiltersToggle.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-filter');
