@@ -688,9 +688,9 @@ a {
 
     .filters-columns {
         grid-template-columns: 1fr;
-        max-height: calc(100vh - 120px); /* Добавляем фиксированную высоту */
+        max-height: calc(100vh - 120px);
         overflow-y: auto;
-        padding-bottom: 1rem; /* Уменьшаем отступ */
+        padding-bottom: 1rem;
     }
 
     .filter-buttons-container {

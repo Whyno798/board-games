@@ -187,6 +187,13 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    const mobileFiltersToggle = document.getElementById('mobile-filters-toggle');
+    const filters = document.querySelector('.filters');
+
+    mobileFiltersToggle.addEventListener('click', () => {
+        filters.classList.toggle('visible');
+    });
+
     document.querySelectorAll('.accordion-header').forEach(header => {
         header.addEventListener('click', () => {
             const accordion = header.parentElement;
