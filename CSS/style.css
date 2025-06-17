@@ -739,9 +739,10 @@ a {
 
     .filters-columns {
         grid-template-columns: 1fr;
-        overflow-y: auto;
         padding-bottom: 120px;
         padding-right: 8px;
+        overflow-y: visible;
+        max-height: none;
     }
 
     .filter-buttons-container {
@@ -781,8 +782,14 @@ a {
         margin: 0.5rem 0;
     }
 
+    .accordion-header i {
+        display: none;
+    }
+
     .accordion-content {
+        max-height: none !important;
         padding: 0.5rem 0 !important;
+        display: block !important;
     }
 }
 

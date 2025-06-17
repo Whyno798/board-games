@@ -201,6 +201,12 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileFiltersToggle.addEventListener('click', () => {
             filters.classList.toggle('visible');
             document.body.style.overflow = filters.classList.contains('visible') ? 'hidden' : '';
+
+            if (window.innerWidth <= 992) {
+                document.querySelectorAll('.accordion').forEach(acc => {
+                    acc.classList.add('active');
+                });
+            }
         });
     }
 });
