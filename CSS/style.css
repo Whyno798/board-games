@@ -699,6 +699,10 @@ body.no-scroll {
     overflow: hidden;
 }
 
+.mobile-only {
+    display: none;
+}
+
 /* ======================
    RESPONSIVE STYLES
    ====================== */
@@ -766,10 +770,14 @@ body.no-scroll {
         padding: 1rem;
         padding-bottom: 80px;
         overflow-y: auto;
+        background: white;
+        opacity: 0;
+        animation: none;
     }
 
     .filters.visible {
         transform: translateY(0);
+        opacity: 1;
     }
 
     .mobile-filters-toggle {
@@ -783,8 +791,10 @@ body.no-scroll {
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 999;
+        z-index: 1001;
         box-shadow: var(--shadow-lg);
+        background-color: var(--primary);
+        color: white;
     }
 
     .mobile-filters-toggle i {
@@ -793,6 +803,11 @@ body.no-scroll {
 
     .mobile-filters-toggle span {
         display: none;
+    }
+
+    .mobile-only {
+        display: inline;
+        margin-left: 5px;
     }
 
     body.no-scroll .games-container {
@@ -816,7 +831,7 @@ body.no-scroll {
         padding: 0.75rem;
         background: white;
         border-top: 1px solid var(--light-gray);
-        z-index: 1001;
+        z-index: 1002;
     }
 
     .filter-btn {
@@ -893,14 +908,6 @@ body.no-scroll {
 
     .accordion-content label {
         margin-bottom: 0;
-    }
-
-    .filters {
-        width: 100%;
-        position: static;
-        height: auto;
-        margin-right: 0;
-        margin-bottom: 20px;
     }
 
     .filter-section {

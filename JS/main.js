@@ -206,26 +206,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
 
     if (mobileFiltersToggle && filters) {
-        mobileFiltersToggle.addEventListener('click', () => {
-            filters.classList.toggle('visible');
+        mobileFiltersToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             body.classList.toggle('no-scroll');
+            filters.classList.toggle('visible');
 
             const icon = mobileFiltersToggle.querySelector('i');
-            if (filters.classList.contains('visible')) {
-                icon.classList.remove('fa-filter');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-filter');
-            }
+            icon.classList.toggle('fa-filter');
+            icon.classList.toggle('fa-times');
         });
 
-        filters.addEventListener('click', (e) => {
-            if (e.target === filters) {
-                filters.classList.remove('visible');
+        document.addEventListener('click', (e) => {
+            if (filters.classList.contains('visible') &&
+                !filters.contains(e.target) &&
+                e.target !== mobileFiltersToggle &&
+                !mobileFiltersToggle.contains(e.target)) {
                 body.classList.remove('no-scroll');
-                mobileFiltersToggle.querySelector('i').classList.remove('fa-times');
-                mobileFiltersToggle.querySelector('i').classList.add('fa-filter');
+                filters.classList.remove('visible');
+
+                const icon = mobileFiltersToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-filter');
             }
         });
     }
