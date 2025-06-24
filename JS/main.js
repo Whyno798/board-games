@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p><strong>Время игры:</strong> ${game.time}</p>
                     <p><strong>Сложность:</strong> ${complexityText[game.complexity] || game.complexity}</p>
                     <p><strong>Тип:</strong> ${game.type.join(', ')}</p>
-                    ${game.tags && game.tags.length > 0 ? `<p><strong>Теги:</strong> ${game.tags.join(', ')}</p>` : ''}
+                    ${game.tags && game.tags.length > 0 ? `<p><strong>Дополнения:</strong> ${game.tags.join(', ')}</p>` : ''}
                 </div>
             </div>
         </div>
