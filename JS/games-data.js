@@ -45,7 +45,7 @@ const games = [
         players: "2-6",
         time: "60-90 мин",
         complexity: 2,
-        type: ["Экономика"],
+        type: ["Стратегия"],
         tags: ["нет"],
         image: "imagines/x3821_nastolnaya-igra-menedzher.jpg"
     },
@@ -55,7 +55,7 @@ const games = [
         players: "1-4",
         time: "60-90 мин",
         complexity: 2,
-        type: ["Стратегия, Логика"],
+        type: ["Стратегия"],
         tags: ["нет"],
         image: "imagines/Ostrov_Koshek-1000x416-wm.jpg"
     },
@@ -85,7 +85,7 @@ const games = [
         players: "4-5",
         time: "60-120 мин",
         complexity: 2,
-        type: ["Детектив, Хоррор"],
+        type: ["Кооператив, Квест"],
         tags: ["нет"],
         image: "imagines/Ujastik-1000x416-wm.jpg"
     },
@@ -105,7 +105,7 @@ const games = [
         players: "2-5",
         time: "40+ мин",
         complexity: 2,
-        type: ["Стратегия"],
+        type: ["Евро, Стратегия"],
         tags: ["нет"],
         image: "imagines/Karkasson_Ohotnik_00-1000x416-wm.jpg"
     },
@@ -125,7 +125,7 @@ const games = [
         players: "1-4",
         time: "60-90 мин",
         complexity: 2,
-        type: ["Детектив"],
+        type: ["Кооператив, Квест"],
         tags: ["нет"],
         image: "imagines/Mesto_prestuplenia_Prekrasnaya_epokha_01-1000x416-wm.jpg"
     },
@@ -135,7 +135,7 @@ const games = [
         players: "1-8",
         time: "90+ мин",
         complexity: 2,
-        type: ["Детектив, Квест"],
+        type: ["Кооператив, Квест"],
         tags: ["нет"],
         image: "imagines/Sherlock_Holms-1000x416-wm.jpg"
     }, {
@@ -153,7 +153,7 @@ const games = [
         players: "2",
         time: "30 мин",
         complexity: 2,
-        type: ["Карточная, тактическая"],
+        type: ["Дуэль"],
         tags: ["нет"],
         image: "imagines/gwent.webp"
     }, {
@@ -162,7 +162,7 @@ const games = [
         players: "2-5",
         time: "30-60 мин",
         complexity: 2,
-        type: ["Стратегия, карточная"],
+        type: ["Стратегия"],
         tags: ["Жемчужная империя, Свет и Тьма"],
         image: "imagines/Res_Arcana-1000x416-wm.jpg"
     }, {
@@ -171,7 +171,7 @@ const games = [
         players: "2-4",
         time: "30-60 мин",
         complexity: 2,
-        type: ["Карточная, для вечеринок"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/Taverna_Krasnyj_Drakon00-1000x416-wm.jpg"
     }, {
@@ -225,7 +225,7 @@ const games = [
         players: "2",
         time: "30+ мин",
         complexity: 2,
-        type: ["Дуэль, стратегия"],
+        type: ["Дуэль, классика"],
         tags: ["нет"],
         image: "imagines/Opening_chess_position_from_black_side.jpg"
     }, {
@@ -234,7 +234,7 @@ const games = [
         players: "2-4",
         time: "10-30 мин",
         complexity: 1,
-        type: ["Стратегия"],
+        type: ["Классика"],
         tags: ["нет"],
         image: "imagines/karpovo-di-news-208_1651837780.jpg"
     }, {
@@ -243,7 +243,7 @@ const games = [
         players: "1-5",
         time: "60+ мин",
         complexity: 2,
-        type: ["Сюжетное"],
+        type: ["Сюжетное, кооператив"],
         tags: ["Темные тропы"],
         image: "imagines/LotR_journey-in-middle-earth-1000x416-wm.jpg"
     }, {
@@ -282,7 +282,7 @@ const games = [
         players: "2-4",
         time: "30-45 мин",
         complexity: 2,
-        type: ["Стратегия, экономика"],
+        type: ["Стратегия"],
         tags: ["нет"],
         image: "imagines/roskosh-00-1000x416-wm.jpg"
     },
@@ -292,7 +292,7 @@ const games = [
         players: "2-12",
         time: "60 мин",
         complexity: 2,
-        type: [""],
+        type: ["Стратегия"],
         tags: ["нет"],
         image: "imagines/zaraza.jpg"
     },
@@ -302,7 +302,7 @@ const games = [
         players: "2-4",
         time: "10-20 мин",
         complexity: 1,
-        type: ["Логика"],
+        type: ["Стратегия"],
         tags: ["нет"],
         image: "imagines/Koridor-1000x416-wm.jpg"
     },
@@ -312,7 +312,7 @@ const games = [
         players: "2",
         time: "10-20 мин",
         complexity: 1,
-        type: ["дуэль"],
+        type: ["Дуэль, стратегия"],
         tags: ["нет"],
         image: "imagines/Quarto-1000x416-wm.jpg"
     },
@@ -342,7 +342,7 @@ const games = [
         players: "1-4",
         time: "30 мин",
         complexity: 1,
-        type: ["Головоломки"],
+        type: ["Стратегия"],
         tags: ["нет"],
         image: "imagines/tangram.jpg"
     },
@@ -352,7 +352,7 @@ const games = [
         players: "2-4",
         time: "20+ мин",
         complexity: 2,
-        type: ["Карточная"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/Dos-1000x416-wm.jpg"
     },
@@ -362,7 +362,7 @@ const games = [
         players: "2-10",
         time: "15+ мин",
         complexity: 1,
-        type: ["Карточная"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/Uno-1000x416-wm.jpg"
     },
@@ -412,7 +412,7 @@ const games = [
         players: "2",
         time: "30 мин",
         complexity: 2,
-        type: [""],
+        type: ["Дуэль"],
         tags: ["нет"],
         image: "imagines/31pmQ9o9FML._AC_UF1000,1000_QL80_.jpg"
     },
@@ -482,7 +482,7 @@ const games = [
         players: "1-4",
         time: "180+ мин",
         complexity: 3,
-        type: ["Сюжетная"],
+        type: ["Сюжетное, кооператив"],
         tags: ["нет"],
         image: "imagines/descent_legends_of_the_dark_00-1000x416-wm.jpg"
     },
@@ -492,7 +492,7 @@ const games = [
         players: "3-5",
         time: "25+ мин",
         complexity: 2,
-        type: ["Стртегия, карточная"],
+        type: ["Стратегия"],
         tags: ["нет"],
         image: "imagines/Oriflamma-1000x416-wm.jpg"
     },
@@ -533,7 +533,7 @@ const games = [
         players: "1-5",
         time: "50 мин",
         complexity: 2,
-        type: ["Хоррор, кооператив"],
+        type: ["Кооператив, квест"],
         tags: ["нет"],
         image: "imagines/obitel_00-1000x416-wm.jpg"
     },
@@ -543,7 +543,7 @@ const games = [
         players: "1-4",
         time: "60-120 мин",
         complexity: 2,
-        type: ["Хоррор, кооператив"],
+        type: ["Квест, кооператив"],
         tags: ["нет"],
         image: "imagines/Exit_kladbiche_Tmi-1000x416-wm.jpg"
     },
@@ -553,7 +553,7 @@ const games = [
         players: "1-4",
         time: "60-120 мин",
         complexity: 2,
-        type: ["Хоррор, кооператив"],
+        type: ["Квест, кооператив"],
         tags: ["нет"],
         image: "imagines/Exit_Zlovechiy_Osobnyak-1000x416-wm.jpg"
     },
@@ -563,7 +563,7 @@ const games = [
         players: "2-4",
         time: "30+ мин",
         complexity: 2,
-        type: ["Кооператив, выживание"],
+        type: ["Кооператив"],
         tags: ["нет"],
         image: "imagines/Zapret_ostr-1000x416-wm.jpg"
     },
@@ -573,7 +573,7 @@ const games = [
         players: "2-4",
         time: "15 мин",
         complexity: 2,
-        type: ["Семейное"],
+        type: ["Семейное, стратегия"],
         tags: ["нет"],
         image: "imagines/Loskutnoe_Korolevstvo-1000x416-wm.jpg"
     },
@@ -593,7 +593,7 @@ const games = [
         players: "2-4",
         time: "60-90 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий"],
+        type: ["Стратегия, дуэль"],
         tags: ["Сезоны"],
         image: "imagines/Inish-1000x416-wm.jpg"
     },
@@ -603,7 +603,7 @@ const games = [
         players: "6-20",
         time: "60+ мин",
         complexity: 1,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Мафия, для вечеринок"],
         tags: ["нет"],
         image: "imagines/mafia.jpg"
     },
@@ -613,7 +613,7 @@ const games = [
         players: "2-6",
         time: "60+ мин",
         complexity: 1,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, для вечеринок"],
         tags: ["нет"],
         image: "imagines/Monopoly_GoT-1000x416-wm.jpg"
     },
@@ -623,7 +623,7 @@ const games = [
         players: "2-6",
         time: "60+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия"],
         tags: ["нет"],
         image: "imagines/Eyforia-1000x416-wm.jpg"
     },
@@ -633,7 +633,7 @@ const games = [
         players: "2-5",
         time: "40-60 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, кооператив"],
         tags: ["нет"],
         image: "imagines/evakyacia.jpg"
     },
@@ -643,7 +643,7 @@ const games = [
         players: "2-4",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/scrabbleenl-1000x416-wm.jpg"
     },
@@ -653,7 +653,7 @@ const games = [
         players: "2-6",
         time: "45+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Полукооператив"],
         tags: ["нет"],
         image: "imagines/Skotland_Yard-1000x416-wm.jpg"
     },
@@ -663,7 +663,7 @@ const games = [
         players: "2-5",
         time: "90+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, евро"],
         tags: ["Сальса"],
         image: "imagines/konkordia.jpg"
     },
@@ -673,7 +673,7 @@ const games = [
         players: "2+",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, для вечеринок"],
         tags: ["нет"],
         image: "imagines/poker-chips-00-1000x416-wm.jpg"
     },
@@ -683,7 +683,7 @@ const games = [
         players: "2+",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/15_Igr_00-1000x416-wm.jpg"
     },
@@ -693,7 +693,7 @@ const games = [
         players: "2-9",
         time: "30-60 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/Nuar-1000x416-wm.jpg"
     },
@@ -703,7 +703,7 @@ const games = [
         players: "2-7",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Полукооператив"],
         tags: ["нет"],
         image: "imagines/Chujaya_Planeta-1000x416-wm.jpg"
     },
@@ -713,7 +713,7 @@ const games = [
         players: "2",
         time: "20-40 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Дуэль"],
         tags: ["нет"],
         image: "imagines/Na_Grani-1000x416-wm.jpg"
     },
@@ -723,7 +723,7 @@ const games = [
         players: "2-5",
         time: "120-180 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Полукооператив"],
         tags: ["нет"],
         image: "imagines/YArost_Drakuly00-1000x416-wm.jpg"
     },
@@ -733,7 +733,7 @@ const games = [
         players: "2-4",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, дуэль"],
         tags: ["Их много"],
         image: "imagines/Zames_box00-1000x416-wm.jpg"
     },
@@ -743,7 +743,7 @@ const games = [
         players: "2-6",
         time: "15+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/svintus3d_box-1000x416-wm.jpg"
     },
@@ -753,7 +753,7 @@ const games = [
         players: "3-8",
         time: "120-180 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия"],
         tags: ["Мать драконов"],
         image: "imagines/agot00-1000x416-wm.jpg"
     },
@@ -763,7 +763,7 @@ const games = [
         players: "2-7",
         time: "40-60 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/Mistrium-1000x416-wm.jpg"
     },
@@ -773,7 +773,7 @@ const games = [
         players: "2-5",
         time: "60-90 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, евро"],
         tags: ["нет"],
         image: "imagines/Last_Will-1000x416-wm.jpg"
     },
@@ -783,7 +783,7 @@ const games = [
         players: "2-4",
         time: "60-90 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, евро"],
         tags: ["нет"],
         image: "imagines/London-1000x416-wm.jpg"
     },
@@ -793,7 +793,7 @@ const games = [
         players: "2",
         time: "15+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Дуэль, стратегия"],
         tags: ["нет"],
         image: "imagines/Duel_Dvuh_Mirov-1000x416-wm.jpg"
     },
@@ -803,7 +803,7 @@ const games = [
         players: "2-4",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, дуэль"],
         tags: ["Белоснежка и Красная Шапочка"],
         image: "imagines/Strashnye_Skazki00-1000x416-wm.jpg"
     },
@@ -813,7 +813,7 @@ const games = [
         players: "2-4",
         time: "30-60 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, дуэль"],
         tags: ["нет"],
         image: "imagines/Evolution-1000x416-wm.jpg"
     },
@@ -823,7 +823,7 @@ const games = [
         players: "1-5",
         time: "60 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия"],
         tags: ["нет"],
         image: "imagines/AGOT_Catan_3d-1000x416-wm.jpg"
     },
@@ -833,7 +833,7 @@ const games = [
         players: "3-5",
         time: "90+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, евро"],
         tags: ["нет"],
         image: "imagines/Nashe_More-1000x416-wm.jpg"
     },
@@ -843,7 +843,7 @@ const games = [
         players: "2-12",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Мафия"],
         tags: ["Почтовый ящик"],
         image: "imagines/Pisma_Prizraka-1000x416-wm.jpg"
     },
@@ -853,7 +853,7 @@ const games = [
         players: "3-6",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, для вечеринок"],
         tags: ["нет"],
         image: "imagines/Munchkin_Legendarniy00-1000x416-wm.jpg"
     },
@@ -863,7 +863,7 @@ const games = [
         players: "1-6",
         time: "60-180 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, евро"],
         tags: ["нет"],
         image: "imagines/Vinodelie_01-1000x416-wm.jpg"
     },
@@ -873,7 +873,7 @@ const games = [
         players: "2-7",
         time: "45-60 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия"],
         tags: ["нет"],
         image: "imagines/mez_dvyx_zamkov.png"
     },
@@ -883,7 +883,7 @@ const games = [
         players: "2-4",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия"],
         tags: ["нет"],
         image: "imagines/dominion_vtoraja-redakcija_3D_roznica-1000x416-wm.jpg"
     },
@@ -893,7 +893,7 @@ const games = [
         players: "2-5",
         time: "30-60 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия"],
         tags: ["Европа: 1912"],
         image: "imagines/Ticket-to-Ride_Europe00-1000x416-wm.jpg"
     },
@@ -903,7 +903,7 @@ const games = [
         players: "2-4",
         time: "60+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, евро"],
         tags: ["нет"],
         image: "imagines/drevnii_mir.jpg"
     },
@@ -913,7 +913,7 @@ const games = [
         players: "2-5",
         time: "15+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/vzryvnye_kotyata_2022-1000x416-wm.jpg"
     },
@@ -923,7 +923,7 @@ const games = [
         players: "3-8",
         time: "15+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/streleckii_bynt.jpg"
     },
@@ -933,7 +933,7 @@ const games = [
         players: "4-7",
         time: "20+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/bang_box_100-1000x416-wm.jpg"
     },
@@ -943,7 +943,7 @@ const games = [
         players: "2-7",
         time: "30-60 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия"],
         tags: ["нет"],
         image: "imagines/citadels_classic_00-1000x416-wm.jpg"
     },
@@ -953,7 +953,7 @@ const games = [
         players: "3-6",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/Greshochki_00-1000x416-wm.jpg"
     },
@@ -963,7 +963,7 @@ const games = [
         players: "3-5",
         time: "45+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/Bonanza_00-1000x416-wm.jpg"
     },
@@ -973,7 +973,7 @@ const games = [
         players: "2-6",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/Pechenka-1000x416-wm.jpg"
     },
@@ -983,7 +983,7 @@ const games = [
         players: "2-12",
         time: "30-40 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок, стратегия"],
         tags: ["нет"],
         image: "imagines/Gnomi_Vrediteli-1000x416-wm.jpg"
     },
@@ -993,7 +993,7 @@ const games = [
         players: "2-5",
         time: "90+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Евро, стратегия"],
         tags: ["нет"],
         image: "imagines/Puerto_Riko_100-1000x416-wm.jpg"
     },
@@ -1003,7 +1003,7 @@ const games = [
         players: "2-4",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Евро"],
         tags: ["нет"],
         image: "imagines/Planet-1000x416-wm.jpg"
     },
@@ -1013,7 +1013,7 @@ const games = [
         players: "3-7",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия"],
         tags: ["нет"],
         image: "imagines/7_Chudes-1000x416-wm.jpg"
     },
@@ -1023,7 +1023,7 @@ const games = [
         players: "2-4",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия"],
         tags: ["нет"],
         image: "imagines/Boss_Monstr-1000x416-wm.jpg"
     },
@@ -1033,7 +1033,7 @@ const games = [
         players: "2-6",
         time: "10+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, для вечеринок"],
         tags: ["нет"],
         image: "imagines/Volshebnoe_Korolevstva-1000x416-wm.jpg"
     },
@@ -1043,7 +1043,7 @@ const games = [
         players: "4-12",
         time: "15-60 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, для вечеринок"],
         tags: ["нет"],
         image: "imagines/Nechto00-1000x416-wm.jpg"
     },
@@ -1053,7 +1053,7 @@ const games = [
         players: "2-15",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/belie_istorii.jpg"
     },
@@ -1063,7 +1063,7 @@ const games = [
         players: "2-8",
         time: "20+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/NET.jpg"
     },
@@ -1073,7 +1073,7 @@ const games = [
         players: "2-8",
         time: "15+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/3_Sekreta-1000x416-wm.jpg"
     },
@@ -1083,7 +1083,7 @@ const games = [
         players: "2-8",
         time: "15+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/3_Sekreta-dop.jpg"
     },
@@ -1093,7 +1093,7 @@ const games = [
         players: "2",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Дуэль"],
         tags: ["нет"],
         image: "imagines/danse.webp"
     },
@@ -1103,7 +1103,7 @@ const games = [
         players: "3-8",
         time: "20+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/Monstr_Po_Sosedstvu-1000x416-wm.jpg"
     },
@@ -1113,7 +1113,7 @@ const games = [
         players: "4-9",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/ADO00-1000x416-wm.jpg"
     },
@@ -1123,7 +1123,7 @@ const games = [
         players: "1-4",
         time: "60-90 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Квест, кооператив"],
         tags: ["нет"],
         image: "imagines/Mesto_Prestupleniya_Srednevekovye00-1000x416-wm.jpg"
     },
@@ -1133,7 +1133,7 @@ const games = [
         players: "2-8",
         time: "15+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок, полукооператив"],
         tags: ["нет"],
         image: "imagines/Codenames00-1000x416-wm.jpg"
     },
@@ -1143,7 +1143,7 @@ const games = [
         players: "2-8",
         time: "15+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок, полукооператив"],
         tags: ["нет"],
         image: "imagines/Codenames_Pictures-1000x416-wm.jpg"
     },
@@ -1153,7 +1153,7 @@ const games = [
         players: "4+",
         time: "60+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок, полукооператив"],
         tags: ["нет"],
         image: "imagines/Alias_Original-1000x416-wm.jpg"
     },
@@ -1163,7 +1163,7 @@ const games = [
         players: "2-5",
         time: "60-120 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Кооператив"],
         tags: ["нет"],
         image: "imagines/Myortvyj_Sezon_Perekryostki00-1000x416-wm.jpg"
     },
@@ -1173,7 +1173,7 @@ const games = [
         players: "2-4",
         time: "90-360 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Сюжетное, кооператив"],
         tags: ["Дело Марси, Пророчество о драконах, Под маской, Тайна „Эндьюранса“, Эстрелья-драйв, Береговое братство, Мадам"],
         image: "imagines/1-1000x416-wm.jpg"
     },
@@ -1183,7 +1183,7 @@ const games = [
         players: "2-5",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Евро, стратегия"],
         tags: ["нет"],
         image: "imagines/carcassonne_2022_00-1000x416-wm.jpg"
     },
@@ -1193,7 +1193,7 @@ const games = [
         players: "3-10",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/detector.jpg"
     },
@@ -1203,7 +1203,7 @@ const games = [
         players: "1-8",
         time: "120-240 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Кооператив, стратегия"],
         tags: ["Хребты Безумия, Знамения Каркозы, Забытые Тайны"],
         image: "imagines/EH00-1000x416-wm.jpg"
     },
@@ -1213,7 +1213,7 @@ const games = [
         players: "2-4",
         time: "60-90 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Сюжетное, кооператив"],
         tags: ["нет"],
         image: "imagines/Andor-1000x416-wm.jpg"
     },
@@ -1223,7 +1223,7 @@ const games = [
         players: "2-5",
         time: "60-90 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия"],
         tags: ["нет"],
         image: "imagines/large_Box_GDF_rus_small.png"
     },
@@ -1233,7 +1233,7 @@ const games = [
         players: "2-4",
         time: "30-60 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/zlodei_00-1000x416-wm.jpg"
     },
@@ -1243,7 +1243,7 @@ const games = [
         players: "3-6",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Для вечеринок"],
         tags: ["нет"],
         image: "imagines/Stradayuchee_Srednevekove-1000x416-wm.jpg"
     },
@@ -1253,7 +1253,7 @@ const games = [
         players: "2-6",
         time: "30-60 мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, дуэль"],
         tags: ["нет"],
         image: "imagines/Evolution_Podarochnoe-1000x416-wm.jpg"
     },
@@ -1263,7 +1263,7 @@ const games = [
         players: "2-4",
         time: "10+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, дуэль"],
         tags: ["нет"],
         image: "imagines/tainoe_poslanie.jpg"
     },
@@ -1273,7 +1273,7 @@ const games = [
         players: "2",
         time: "30+ мин",
         complexity: 3,
-        type: ["Стратегия, контроль территорий, дополнение"],
+        type: ["Стратегия, дуэль, классика"],
         tags: ["нет"],
         image: "imagines/nardy.jpg"
     },
